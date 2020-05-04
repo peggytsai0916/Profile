@@ -1,0 +1,194 @@
+<div id="app">
+<div class="resmue-container">
+<div style="display: flex;">
+	<aside>
+		<section class="text-center" style="padding:0">
+			<img class="porfile-pic" src="img/designer.jpeg" alt="">
+			<h2 style="margin-bottom: 5px;font-family: Microsoft JhengHei;">{{(Resume.Name)}}</h2>
+      <h3 style="margin-bottom: 5px">{{(Resume.EnglishName)}}</h3>
+      <small class="text-muted">{{Resume.Title}}</small>
+		</section>
+  
+		<section>
+			<h3 class="line-title center">聯絡資訊 Contact</h3>
+        <p class="text-muted">
+        <small>
+        <b>Email:</b> {{Resume.Email}}</br>
+        <b>Phone:</b> {{Resume.Phone}}</br>
+        <b>Facebook:</b> {{Resume.Facebook}}
+        </small>
+     </p>
+		</section>
+     <section> 
+          <h3 class="line-title center">學歷 Education</h3>
+        <p class="read">
+         {{Resume.TKUIM}}</br>
+         {{Resume.Grade}} 
+        </p>
+
+     </section>
+
+ <section>
+        <h3 class="line-title center">語言能力 Language</h3>
+        <ul class="skill-list">
+         <li v-for="item in LanguageData">
+           {{item.desc}}
+         </li>
+        </ul>
+ </section>
+
+	   <section>
+        <h3 class="line-title center">程式語言 Skills</h3>
+        <ul class="skill-list">
+        <li v-for="item in SkillData">
+           {{item.desc}}
+         </li>            
+        </ul>
+      </section>
+	</aside>
+
+	<main>
+		<section>
+			<h3 class="line-title">關於我 About me</h3>
+			<article class="flex-group">
+			
+				<div class="full">
+					
+					<p class="read-Detail">{{Resume.Summary}}</p>
+				</div>
+			</article>
+		</section>
+			<section>
+
+			<h3 class="line-title">實習經歷 Internship</h3>
+
+			<article class="flex-group">
+
+				<div class="short">
+					<h4>{{Resume.Titansoft}}</h4>
+              <small>
+                2020.02~2020.07
+              </small>
+        <p></p>
+				</div>
+
+				<div class="full">
+					<a>{{Resume.TitansoftPosition}}</a>
+					<p class="read-Detail">
+            {{Resume.TitansoftDatil}}
+          </p>
+     <hr>
+				</div>
+     
+			</article>
+
+
+        <article class="flex-group">
+        <div class="short">
+          <h4>{{Resume.JunyiAcademy}}</h4>
+            <small>
+           2019.06~2020.01
+            </small>
+      
+        </div>
+       	<div class="full">
+					<a>{{Resume.JunyiAcademyPosition}}</a>
+					<p class="read-Detail">
+            {{Resume.JunyiChange}}
+          </p>
+          	<p class="read-Detail">
+            {{Resume.JunyiTravel}}
+          </p>
+
+          <hr>
+        </div>
+      </article>
+
+		</section>
+
+
+		<section>
+			<h3 class="line-title">畢業專題 Independent Study </h3>
+  			<article class="flex-group">
+  				<div class="short">
+  					<h4>{{Resume.IndependentStudy}}</h4>
+  					<p>2018.06~2019.10</p>
+        
+  				</div>
+  				<div class="full">
+					<a>{{Resume.IndependentStudyPosition}}</a>
+					<p class="read-Detail">
+            {{Resume.IndependentStudyDetail}}
+          </p>
+            <hr>
+        </div>
+          <div class="short">
+  					<h4>得獎紀錄</h4>
+  				</div>
+  				<div class="full">
+				<ul class="skill-list">
+        <li v-for="item in AwardData">
+           {{item.desc}}
+         </li>            
+        </ul>
+            </div>
+  			</article>
+		</section>
+    
+    <section>
+			<h3 class="line-title">社團經歷與海外交流經驗 Experience</h3>
+  			<article class="flex-group">
+  				<div class="short">
+  					<h4>{{Resume.Club}}</h4>
+  					<p>2018.06~2019.03</p>
+  				</div>
+  				<div class="full">
+					<a>{{Resume.ClubPosition}}</a>
+        <p class="read-Detail">
+            {{Resume.ClubDatil}}
+          </p>
+            <hr>
+        </div>   
+  			</article>
+      
+      <article class="flex-group">
+        <div class="short">
+          <h4>{{Resume.JilinUniversity}}</h4>
+          <p>2018.12</p>
+        </div>
+        <div class="full">
+          <a>{{Resume.Representative}}</a>
+         <p class="read-Detail">
+
+            {{Resume.JilinUniversityDatil}}
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <hr>
+        </div>   
+      </article>
+      
+      <article class="flex-group">
+        <div class="short">
+          <h4>{{Resume.XJTU}}</h4>
+          <p>2018.12</p>
+        </div>
+        <div class="full">
+          <a>{{Resume.Representative}}</a>
+        <p class="read-Detail">
+            {{Resume.XJYUDatil}}
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <hr>
+        </div>   
+      </article>
+		</section>
+    
+
+    
+	</main>
+</div>
+</div>
